@@ -1,0 +1,7 @@
+com.topview.shop.common.security.service.UserDetailsServiceImpl
+com.topview.shop.common.security.service.AppUserDetailsServiceImpl
+com.topview.shop.common.security.service.RedisOAuth2AuthorizationService
+com.topview.shop.common.security.service.RedisOAuth2AuthorizationConsentService
+com.topview.shop.common.security.component.SecurityInnerAspect
+com.topview.shop.common.security.component.SecurityMessageSourceConfiguration
+com.topview.shop.common.security.service.RemoteRegisteredClientRepository

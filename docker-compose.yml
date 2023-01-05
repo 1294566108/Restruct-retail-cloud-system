@@ -1,0 +1,118 @@
+version: '3'
+services:
+#  shop-mysql:
+#    build:
+#      context: ./db
+#    environment:
+#      MYSQL_ROOT_HOST: "%"
+#      MYSQL_ROOT_PASSWORD: root
+#    restart: always
+#    container_name: shop-mysql
+#    image: shop-mysql
+#    ports:
+#      - 3306:3306
+#
+#  shop-redis:
+#    image: redis:7.0.0
+#    ports:
+#      - 6379:6379
+#    restart: always
+#    container_name: shop-redis
+#    hostname: shop-redis
+#
+#  shop-register:
+#    build:
+#      context: ./shop-register
+#    restart: always
+#    ports:
+#      - 8848:8848
+#    container_name: shop-register
+#    hostname: shop-register
+#    image: shop-register
+
+  shop-gateway:
+    build:
+      context: ./shop-gateway
+    restart: always
+    ports:
+      - 9999:9999
+    container_name: shop-gateway
+    hostname: 10.21.23.91
+    image: shop-gateway
+
+  shop-auth:
+    build:
+      context: ./shop-auth
+    restart: always
+    ports:
+      - 3000:3000
+    container_name: shop-auth
+    hostname: 10.21.23.91
+    image: shop-auth
+
+  shop-upms:
+    build:
+      context: ./shop-upms/shop-upms-biz
+    restart: always
+    ports:
+      - 4000:4000
+    container_name: shop-upms
+    hostname: 10.21.23.91
+    image: shop-upms
+
+  shop-file:
+    build:
+       context: ./shop-file/shop-file-biz
+      restart: always
+      ports:
+        - 4001:4001
+      container_name: shop-file
+      hostname: 10.21.23.91
+      image: shop-file
+
+  shop-site:
+    build:
+        context: ./shop-site/shop-site-biz
+      restart: always
+      ports:
+        - 4002:4002
+      container_name: shop-site
+      hostname: 10.21.23.91
+      image: shop-site
+
+  shop-monitor:
+    build:
+      context: ./shop-visual/shop-monitor
+    restart: always
+    ports:
+      - 5001:5001
+    container_name: shop-monitor
+    hostname: 10.21.23.91
+    image: shop-monitor
+
+  shop-sentinel:
+    build:
+      context: ./shop-visual/shop-sentinel-dashboard
+    restart: always
+    image: shop-sentinel
+    container_name: shop-sentinel
+    ports:
+      - 5003:5003
+
+#  shop-codegen:
+#    build:
+#      context: ./shop-visual/shop-codegen
+#    restart: always
+#    container_name: shop-codegen
+#    hostname: shop-codegen
+#    image: shop-codegen
+
+#  shop-job:
+#    build:
+#      context: ./shop-visual/shop-xxl-job-admin
+#    restart: always
+#    container_name: shop-job
+#    hostname: shop-job
+#    image: shop-job
+#    ports:
+#      - 5004:5004

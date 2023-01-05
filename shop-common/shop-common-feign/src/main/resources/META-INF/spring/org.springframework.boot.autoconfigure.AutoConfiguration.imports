@@ -1,0 +1,3 @@
+com.topview.shop.common.feign.FeignAutoConfiguration
+com.topview.shop.common.feign.sentinel.SentinelAutoConfiguration
+com.topview.shop.common.feign.sentinel.handle.GlobalBizExceptionHandler

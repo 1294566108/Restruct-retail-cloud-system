@@ -1,0 +1,6 @@
+com.topview.shop.common.core.config.TaskExecutorConfiguration
+com.topview.shop.common.core.config.JacksonConfiguration
+com.topview.shop.common.core.config.RedisTemplateConfiguration
+com.topview.shop.common.core.config.RestTemplateConfiguration
+com.topview.shop.common.core.util.SpringContextHolder
+com.topview.shop.common.core.config.WebMvcConfiguration

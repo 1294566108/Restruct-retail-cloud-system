@@ -1,0 +1,7 @@
+com.topview.shop.site.api.feign.RemoteClientDetailsService
+com.topview.shop.site.api.feign.RemoteDictService
+com.topview.shop.site.api.feign.RemoteDeptService
+com.topview.shop.site.api.feign.RemoteLogService
+com.topview.shop.site.api.feign.RemoteTokenService
+com.topview.shop.site.api.feign.RemoteUserService
+com.topview.shop.site.api.feign.RemoteParamService
